@@ -3,6 +3,7 @@
 {
   imports = [
     ../../modules/wm/hyprland.nix
+    ../../modules/misc/pkgs.nix
   ];
   home.username = "opgl";
   home.homeDirectory = "/home/opgl";

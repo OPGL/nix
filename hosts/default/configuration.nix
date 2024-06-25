@@ -13,6 +13,7 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.xserver.enable = true;
+  programs.hyprland.enable = true;
 
   networking.networkmanager.enable = true;
 
