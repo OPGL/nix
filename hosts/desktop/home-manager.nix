@@ -1,5 +1,12 @@
-{inputs, ...}: {
-  imports = [inputs.home-manager.nixosModules.default];
+{
+  lib,
+  inputs,
+  ...
+}: {
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+    (lib.mkAliasOptionModule ["homeManager"] ["home-manager" "users" "opgl"])
+  ];
   programs.fuse.userAllowOther = true;
   home-manager = {
     extraSpecialArgs = {inherit inputs;};

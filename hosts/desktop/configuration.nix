@@ -6,7 +6,6 @@ _: {
     description = "Dawid Ploch";
   };
   time.timeZone = "Europe/Warsaw";
-  networking.networkmanager.enable = true;
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;

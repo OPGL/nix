@@ -3,5 +3,6 @@ _: {
     ./packages.nix
     ./misc/gnome.nix
     ./misc/neovim.nix
+    ./gaming
   ];
 }
