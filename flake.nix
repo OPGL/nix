@@ -23,7 +23,8 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/desktop
-        ./modules
+        ./modules/common
+        ./modules/desktop
       ];
     };
     formatter.${system} = pkgs.alejandra;
