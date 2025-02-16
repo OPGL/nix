@@ -11,4 +11,9 @@ _: {
     efi.canTouchEfiVariables = true;
   };
   system.stateVersion = "24.11";
+  nix.settings.experimental-features = [
+    "flakes"
+    "nix-command"
+    "pipe-operators"
+  ];
 }
