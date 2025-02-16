@@ -5,5 +5,6 @@ _: {
     ./hardware-configuration.nix
     ./home-manager.nix
     ./packages.nix
+    ./neovim.nix	
   ];
 }

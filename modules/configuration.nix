@@ -1,8 +1,9 @@
 _: {
-  networking.hostName = "nixos";
-  users.users.nix = {
+  networking.hostName = "ds3h-b760m";
+  users.users.opgl = {
     isNormalUser = true;
     extraGroups = ["wheel"];
+    description = "Dawid Ploch";
   };
   time.timeZone = "Europe/Warsaw";
   networking.networkmanager.enable = true;

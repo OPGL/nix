@@ -4,13 +4,13 @@
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
     backupFileExtension = "hm-bak";
-    users.nix = {
+    users.opgl = {
       programs.home-manager.enable = true;
       systemd.user.startServices = "sd-switch";
       home = {
-        username = "nix";
+        username = "opgl";
         stateVersion = "24.11";
-        homeDirectory = "/home/nix";
+        homeDirectory = "/home/opgl";
       };
     };
   };
