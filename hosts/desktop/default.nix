@@ -1,10 +1,10 @@
 _: {
   imports = [
     ./configuration.nix
-    ./gnome.nix
     ./hardware-configuration.nix
     ./home-manager.nix
-    ./packages.nix
-    ./neovim.nix	
+    ../../modules/misc/gnome.nix
+    ../../modules/misc/neovim.nix
+    ../../modules/packages.nix
   ];
 }

@@ -18,10 +18,13 @@
       config.allowUnfree = true;
     };
   in {
-    nixosConfigurations.nixos = lib.nixosSystem {
+    nixosConfigurations.desktop = lib.nixosSystem {
       inherit pkgs;
       specialArgs = {inherit inputs;};
-      modules = [./modules];
+      modules = [
+        ./hosts/desktop
+        ./modules
+      ];
     };
     formatter.${system} = pkgs.alejandra;
   };
