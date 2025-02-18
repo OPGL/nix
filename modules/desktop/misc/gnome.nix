@@ -5,6 +5,9 @@
     desktopManager.gnome.enable = true;
   };
   homeManager = {
-    home.packages = [pkgs.wl-clipboard];
+    home.packages = [
+      pkgs.wl-clipboard
+      pkgs.nerd-fonts.hurmit
+    ];
   };
 }

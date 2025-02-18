@@ -9,6 +9,12 @@
       url = "github:opgl/nvf-config";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
   };
   outputs = {nixpkgs, ...} @ inputs: let
     inherit (nixpkgs) lib;
