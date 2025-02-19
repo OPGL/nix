@@ -13,7 +13,7 @@ in {
     ./packages.nix
     ./settings.nix
     ./binds.nix
-    ./waybar.nix
+    ./packages/waybar.nix
   ];
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];
@@ -34,6 +34,7 @@ in {
   homeManager = {
     home.packages = [
       pkgs.kitty
+      pkgs.nerd-fonts.hurmit
     ];
     wayland.windowManager.hyprland = {
       enable = true;
