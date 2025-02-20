@@ -20,6 +20,7 @@ in {
     ./packages/waybar.nix
     ./packages/kitty.nix
     ./packages/rofi.nix
+    ./packages/mako.nix
   ];
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];

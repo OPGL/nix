@@ -29,6 +29,7 @@
       gtk.enable = true;
       rofi.enable = true;
       vesktop.enable = true;
+      mako.enable = true;
     };
     iconTheme = {
       enable = true;

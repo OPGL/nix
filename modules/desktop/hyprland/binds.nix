@@ -8,8 +8,8 @@ _: {
     bind = [
       # Screenshots with notifications
       ", PRINT, exec, grim - | wl-copy -t image/png && notify-send 'Screenshot' 'Fullscreen copied to clipboard'"
-      "$mainMod, PRINT, exec, grim -g \"$(slurp -d)\" - | wl-copy -t image/png && notify-send 'Screenshot' 'Selected area copied to clipboard'"
-      "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy -t image/png"
+      "$mainMod, PRINT, exec, grim -g \"$(slurp)\" - | wl-copy -t image/png && notify-send 'Screenshot' 'Selected area copied to clipboard'"
+      "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy -t image/png && notify-send 'Screenshot' 'Selected area copied to clipboard'"
 
       # Application launcher
       "$mainMod, R, exec, rofi -show drun"
