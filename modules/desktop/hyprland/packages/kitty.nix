@@ -1,4 +1,4 @@
-_: {
+{config, ...}: {
   homeManager.programs.kitty = {
     enable = true;
     font.name = "Hurmit Nerd Font";
@@ -20,33 +20,49 @@ _: {
       confirm_os_window_close = 0;
     };
 
-    extraConfig = ''
-      foreground #D8DEE9
-      background #1E1F2B
-      cursor #FF6961
-      cursor_text_color #FFFFFF
+    extraConfig = let
+      inherit
+        (config.stylix.base16Scheme)
+        base01
+        base02
+        base03
+        base05
+        base07
+        base08
+        base09
+        base0A
+        base0B
+        base0C
+        base0D
+        base0E
+        ;
+    in ''
+      foreground #${base05}
+      background #${base01}
+      cursor #${base08}
+      cursor_text_color #${base07}
 
-      color0  #434753
-      color1  #FF6961
-      color2  #9ACD9A
-      color3  #FAC898
-      color4  #AAEAAA
-      color5  #D4A5A5
-      color6  #E6B0AA
-      color7  #B0BEC5
+      color0  #${base02}
+      color1  #${base08}
+      color2  #${base0B}
+      color3  #${base0A}
+      color4  #${base0D}
+      color5  #${base0E}
+      color6  #${base0C}
+      color7  #${base05}
 
-      color8  #606570
-      color9  #FF6B6B
-      color10 #C3E8C3
-      color11 #FFD8A8
-      color12 #C5F5C5
-      color13 #E8C5C5
-      color14 #F0C8C3
-      color15 #FFFFFF
+      color8  #${base03}
+      color9  #${base09}
+      color10 #${base0B}
+      color11 #${base0A}
+      color12 #${base0D}
+      color13 #${base0E}
+      color14 #${base0C}
+      color15 #${base07}
 
       selection_foreground none
-      selection_background #434753
-      url_color #AAEAAA
+      selection_background #${base02}
+      url_color #${base0D}
 
       symbol_map U+e000-U+e00a,U+ea60-U+ebeb,U+e0a0-U+e0c8,U+e0ca,U+e0cc-U+e0d7,U+e200-U+e2a9,U+e300-U+e3e3,U+e5fa-U+e6b1,U+e700-U+e7c5,U+ed00-U+efc1,U+f000-U+f2ff,U+f000-U+f2e0,U+f300-U+f372,U+f400-U+f533,U+f0001-U+f1af0 Symbols Nerd Font Mono
     '';

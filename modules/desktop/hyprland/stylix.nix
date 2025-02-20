@@ -28,6 +28,7 @@
     targets = {
       gtk.enable = true;
       rofi.enable = true;
+      vesktop.enable = true;
     };
     iconTheme = {
       enable = true;

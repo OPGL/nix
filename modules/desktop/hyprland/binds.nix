@@ -64,5 +64,13 @@ _: {
       "$mainMod, mouse:272, movewindow" # Left click
       "$mainMod, mouse:273, resizewindow" # Right click
     ];
+
+    # Resize windows
+    binde = [
+      "super ctrl, h, resizeactive, -20 0"
+      "super ctrl, j, resizeactive, 0 20"
+      "super ctrl, k, resizeactive, 0 -20"
+      "super ctrl, l, resizeactive, 20 0"
+    ];
   };
 }

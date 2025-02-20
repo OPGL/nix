@@ -1,6 +1,6 @@
 {config, ...}: let
   inherit (config.stylix.base16Scheme) base00 base02 base08;
-  inherit (config.stylix.cursor) size;
+  inherit (config.stylix.cursor) size name;
 in {
   homeManager.wayland.windowManager.hyprland.settings = {
     general = {
@@ -42,6 +42,7 @@ in {
     };
 
     env = [
+      "XCURSOR_THEME, ${toString name}"
       "XCURSOR_SIZE, ${toString size}"
     ];
   };

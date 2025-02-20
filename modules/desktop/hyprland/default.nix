@@ -16,6 +16,7 @@ in {
     ./theme.nix
     ./stylix.nix
     ./greetd.nix
+    ./wayland.nix
     ./packages/waybar.nix
     ./packages/kitty.nix
     ./packages/rofi.nix

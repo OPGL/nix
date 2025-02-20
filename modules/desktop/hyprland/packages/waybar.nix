@@ -1,4 +1,4 @@
-{config, ...}: {
+_: {
   homeManager.programs.waybar = {
     enable = true;
     settings = [
