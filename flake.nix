@@ -15,6 +15,7 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
+    stylix.url = "github:danth/stylix";
   };
   outputs = {nixpkgs, ...} @ inputs: let
     inherit (nixpkgs) lib;
@@ -31,6 +32,7 @@
         ./hosts/desktop
         ./modules/common
         ./modules/desktop
+        inputs.stylix.nixosModules.stylix
       ];
     };
     formatter.${system} = pkgs.alejandra;

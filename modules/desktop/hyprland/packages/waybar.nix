@@ -1,4 +1,4 @@
-_: {
+{config, ...}: {
   homeManager.programs.waybar = {
     enable = true;
     settings = [
@@ -8,17 +8,14 @@ _: {
         height = 36;
         spacing = 0;
 
-        # Margins
         margin-top = 10;
         margin-left = 20;
         margin-right = 20;
 
-        # Module declarations
         modules-left = ["clock"];
         modules-center = ["hyprland/workspaces"];
-        modules-right = ["tray" "pulseaudio" "cpu" "temperature" "memory"];
+        modules-right = ["tray" "wireplumber" "memory" "cpu" "temperature"];
 
-        # Module configurations
         tray = {
           icon-size = 20;
           spacing = 10;
@@ -45,16 +42,18 @@ _: {
           format = "{temperatureC}°C";
         };
 
-        pulseaudio = {
-          format = "{volume}% {icon} {format_source}";
-          format-muted = " {format_source}";
-          format-source = " {volume}% ";
-          format-source-muted = "";
+        wireplumber = {
+          format = "{volume}% {icon}";
+          format-muted = " Muted";
           format-icons = {
-            headphone = "";
             default = ["" "" ""];
           };
           on-click = "pavucontrol";
+          on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          on-scroll-up = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 1%+";
+          on-scroll-down = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 1%-";
+          smooth-scrolling-threshold = 0.5;
+          scroll-step = 1;
         };
 
         "hyprland/workspaces" = {
@@ -72,7 +71,9 @@ _: {
     ];
 
     style =
-      #css
+      /*
+      css
+      */
       ''
         * {
           font-family: "Hurmit Nerd Font";
@@ -127,7 +128,7 @@ _: {
         }
 
         #clock,
-        #pulseaudio,
+        #wireplumber,
         #memory,
         #cpu,
         #temperature,
@@ -143,7 +144,7 @@ _: {
           font-weight: 500;
         }
 
-        #pulseaudio {
+        #wireplumber {
           color: #9ACD9A;
         }
 

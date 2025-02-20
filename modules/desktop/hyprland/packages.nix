@@ -4,8 +4,6 @@
     slurp
     wl-clipboard
     nautilus
-    kitty
-    rofi-wayland
     libnotify
     pavucontrol
   ];

@@ -13,7 +13,12 @@ in {
     ./packages.nix
     ./settings.nix
     ./binds.nix
+    ./theme.nix
+    ./stylix.nix
+    ./greetd.nix
     ./packages/waybar.nix
+    ./packages/kitty.nix
+    ./packages/rofi.nix
   ];
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];
