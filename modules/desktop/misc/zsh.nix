@@ -22,6 +22,9 @@
           function ns() {
           nix shell $(printf "nixpkgs#%s " "$@")
           }
+          function nd() {
+            nix develop -c zsh
+          }
         '';
     };
     programs.fzf.enable = true;

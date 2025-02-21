@@ -3,5 +3,6 @@
   environment.systemPackages = with pkgs; [
     git
     vesktop
+    jetbrains.idea-community
   ];
 }

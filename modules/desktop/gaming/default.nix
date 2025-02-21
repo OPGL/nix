@@ -3,5 +3,6 @@ _: {
     ./steam.nix
     ./wine.nix
     ./heroic.nix
+    ./packages.nix
   ];
 }

@@ -6,5 +6,6 @@
     nautilus
     libnotify
     pavucontrol
+    obsidian
   ];
 }
