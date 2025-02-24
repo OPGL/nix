@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.zsh.enable = true;
-  users.users.opgl.shell = pkgs.zsh;
+  users.defaultUserShell = pkgs.zsh;
   homeManager = {
     programs.zsh = {
       enable = true;
